@@ -83,3 +83,14 @@ button{font:inherit}
   object-position:center;
   display:block;
 }
+/* FIX WHAT CAN I DO */
+.services-head h2 {
+    overflow: visible;
+    height: auto;
+    line-height: 1;
+}
+
+.services-head h2 em {
+    display: block;
+    margin-top: 8px;
+}
