@@ -199,9 +199,9 @@ button {
     font-weight: 700;
 }
 
-.eyebrow {
-    color: var(--almond);
-    margin-bottom: 25px;
+/* PORTFOLIO / 2026 - LIGHT MODE */
+body.light-mode .eyebrow {
+    color: var(--pink) !important;
 }
 
 .hero h1 {
@@ -322,7 +322,11 @@ button {
     padding: 10px 13px;
     border-radius: 12px;
 }
-
+/* LABEL NAMA FOTO - LIGHT MODE */
+body.light-mode .portrait-label {
+    color: #fff8f4 !important;
+    background: rgba(119, 51, 68, 0.85) !important;
+}
 /* =================================
    FLOATING NOTES
 ================================= */
@@ -706,12 +710,13 @@ button {
 }
 
 .mock-content h3 {
-    font: 600 clamp(2rem, 4vw, 4rem) / 0.85 "Playfair Display";
-    margin: 15px 0;
+  font: 600 clamp(2rem, 4vw, 4rem) / .85 "Playfair Display";
+  margin: 15px 0;
+  color: var(--violet);
 }
 
 .mock-content h3 em {
-    color: var(--pink);
+  color: var(--pink);
 }
 
 .mock-pill {
@@ -2136,4 +2141,608 @@ button {
       rgba(245, 233, 226, 0.95) 75%
     ),
     var(--almond);
+}
+/* =================================
+   DARK / LIGHT MODE
+================================= */
+
+/* Tombol mode */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(22, 0, 41, .15);
+  border-radius: 50%;
+  background: var(--linen);
+  color: var(--violet);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: .35s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.08);
+  background: var(--pink);
+  color: var(--linen);
+}
+
+/* =========================================
+   CONTACT - LIGHT MODE
+   DUSTY PINK / MAUVE
+========================================= */
+
+body.light-mode .contact {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(185, 88, 111, 0.80) 0%,
+            rgba(160, 75, 99, 0.75) 35%,
+            rgba(125, 61, 84, 0.88) 70%,
+            rgba(100, 48, 70, 0.95) 100%
+        ),
+        linear-gradient(
+            135deg,
+            #8A4961,
+            #A85C73,
+            #773344
+        );
+
+    color: #FFF8F5;
+}
+
+
+/* Background utama */
+body.light-mode {
+  background: var(--linen);
+  color: var(--ink);
+}
+
+
+/* Navbar */
+body.light-mode .navbar {
+  background: rgba(255, 248, 245, .85);
+  border-color: rgba(119, 51, 68, .12);
+}
+
+
+/* Logo */
+body.light-mode .brand {
+  background: var(--plum);
+  color: var(--linen);
+}
+
+
+/* Navbar text */
+body.light-mode .navbar nav a {
+  color: var(--ink);
+}
+
+
+/* Hero */
+body.light-mode .hero {
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(232, 93, 106, .25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #FFF8F5,
+      #FDE4DE,
+      #F8D8D0
+    );
+
+  color: var(--ink);
+}
+
+
+/* Hero text */
+body.light-mode .hero-text {
+  color: #704C59;
+}
+
+
+/* Hero button */
+body.light-mode .btn.secondary {
+  border-color: rgba(119, 51, 68, .25);
+  color: var(--ink);
+}
+
+body.light-mode .btn.secondary:hover {
+  background: var(--plum);
+  color: white;
+}
+
+
+/* About */
+body.light-mode .about {
+  background:
+    linear-gradient(
+      135deg,
+      #FFF8F5 0%,
+      #FDE9E4 50%,
+      #F8D8D0 100%
+    );
+}
+
+
+/* Skills */
+body.light-mode .skills {
+  background:
+    linear-gradient(
+      135deg,
+      #F8D8D0,
+      #FCEBE7,
+      #FFF8F5
+    );
+}
+
+
+/* Skill cards */
+body.light-mode .skill-card {
+  background: rgba(255, 255, 255, .72);
+  color: var(--ink);
+}
+
+body.light-mode .skill-card.dark {
+  background: var(--plum);
+  color: white;
+}
+
+
+/* Projects */
+body.light-mode .projects {
+  background: #FFF8F5;
+}
+
+
+/* Featured project */
+body.light-mode .project.featured {
+  background: #4A2638;
+}
+
+
+/* Experience */
+body.light-mode .experience {
+  background:
+    linear-gradient(
+      135deg,
+      #4A2638,
+      #70384E,
+      #9B5365
+    );
+}
+
+
+/* Services */
+body.light-mode .services {
+  background: var(--pink);
+  color: white;
+}
+
+
+/* Message box */
+body.light-mode .message-box {
+  background: #4A2638;
+}
+
+
+/* Achievements */
+body.light-mode .achievements {
+  background:
+    linear-gradient(
+      135deg,
+      #F8D8D0,
+      #FCEBE7,
+      #FFF8F5
+    );
+}
+
+
+/* Testimonials */
+body.light-mode .testimonials {
+  background: #FFF8F5;
+}
+
+
+/* Contact */
+body.light-mode .contact {
+  background:
+    linear-gradient(
+      135deg,
+      #3B1C30,
+      #5D2942,
+      #7C3D55
+    );
+}
+
+
+/* Tombol Let's talk */
+body.light-mode .nav-contact {
+  background: var(--pink);
+  color: white;
+}
+
+
+/* Animasi pergantian warna */
+body,
+.navbar,
+.hero,
+.about,
+.skills,
+.projects,
+.experience,
+.services,
+.achievements,
+.testimonials,
+.contact,
+.skill-card,
+.message-box {
+  transition:
+    background .5s ease,
+    color .5s ease,
+    border-color .5s ease;
+}
+
+
+/* Mobile */
+@media(max-width:900px) {
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+}
+/* ================================
+   NUSALINGGO - FIX TEXT
+================================ */
+
+.mockup {
+  background: var(--linen);
+  color: var(--violet);
+}
+
+.mock-content h3 {
+  color: var(--violet);
+}
+
+.mock-content h3 em {
+  color: var(--pink);
+}
+
+.mock-content small {
+  color: var(--plum);
+}
+
+.mock-nav {
+  color: var(--violet);
+}
+
+.mock-pill {
+  background: var(--pink);
+  color: var(--linen);
+}
+/* =================================
+   NAVBAR MODE TOGGLE
+================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(22, 0, 41, .15);
+  border-radius: 50%;
+  background: var(--linen);
+  color: var(--violet);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: .35s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.08);
+  background: var(--pink);
+  color: var(--linen);
+}
+
+/* Saat light mode */
+body.light-mode .theme-toggle {
+  background: var(--plum);
+  color: var(--linen);
+  border-color: transparent;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: var(--pink);
+  color: white;
+}
+/* =================================
+   CONTACT - LIGHT MODE FIX
+================================= */
+
+body.light-mode .contact {
+    color: var(--ink);
+}
+
+body.light-mode .contact .section-tag {
+    color: var(--pink);
+}
+
+body.light-mode .contact-content h2 {
+    color: var(--ink);
+}
+
+body.light-mode .contact-content h2 em {
+    color: var(--pink);
+}
+
+body.light-mode .contact-content > p:not(.mini) {
+    color: #684856;
+}
+
+body.light-mode .email-link {
+    color: var(--pink);
+    border-color: var(--pink);
+}
+
+body.light-mode .socials a {
+    color: var(--ink);
+    border-color: rgba(119, 51, 68, .25);
+}
+
+body.light-mode .socials a:hover {
+    background: var(--pink);
+    color: var(--linen);
+}
+
+body.light-mode .footer {
+    color: #684856;
+    border-color: rgba(119, 51, 68, .2);
+}
+
+body.light-mode .footer a:hover {
+    color: var(--pink);
+}
+/* BACKGROUND CONTACT LIGHT MODE */
+
+/* =========================================
+   CONTACT - LIGHT MODE
+   PINK / MAUVE, BUKAN CREAM
+========================================= */
+
+body.light-mode .contact {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(212, 77, 92, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f3c4c2 0%,
+            #d99aa2 45%,
+            #b86b7c 100%
+        ) !important;
+
+    color: var(--ink);
+}
+/* =================================
+   CONTACT LIGHT MODE - FONT FIX
+================================= */
+
+/* Judul Contact */
+body.light-mode .contact-content h2 {
+    color: var(--violet) !important;
+}
+
+/* Tulisan Let's talk */
+body.light-mode .contact-content h2 em {
+    color: var(--pink) !important;
+}
+
+/* Tulisan SEND A MESSAGE */
+body.light-mode .contact .section-tag {
+    color: var(--pink) !important;
+}
+
+/* Deskripsi Contact */
+body.light-mode .contact-content > p {
+    color: var(--plum) !important;
+}
+
+/* Tombol pilihan pesan */
+body.light-mode .message-buttons button {
+    color: var(--violet) !important;
+    border-color: rgba(119, 51, 68, .25) !important;
+}
+
+/* Tombol Ask a Question */
+body.light-mode .message-buttons button:hover {
+    color: var(--linen) !important;
+    background: var(--pink) !important;
+}
+
+/* Email */
+body.light-mode .email-link {
+    color: var(--pink) !important;
+}
+body.light-mode .contact-content h2 {
+    color: var(--violet) !important;
+}
+
+body.light-mode .contact-content h2 em {
+    color: var(--pink) !important;
+}
+
+body.light-mode .message-buttons button {
+    color: var(--violet) !important;
+}
+/* =========================================
+   CONTACT - LIGHT MODE
+   MEMBUAT SEMUA TEKS TERLIHAT
+========================================= */
+
+body.light-mode .contact {
+    color: #240b20 !important;
+}
+
+/* SEND A MESSAGE */
+body.light-mode .contact .section-tag {
+    color: #d44d5c !important;
+}
+
+/* HAVE AN IDEA? */
+body.light-mode .contact-content h2 {
+    color: #240b20 !important;
+}
+
+/* LET'S TALK. */
+body.light-mode .contact-content h2 em {
+    color: #d44d5c !important;
+}
+
+/* Teks deskripsi */
+body.light-mode .contact-content p {
+    color: #773344 !important;
+}
+
+/* Tombol UI/UX Service & Website Project */
+body.light-mode .message-buttons button {
+    color: #240b20 !important;
+    border: 1px solid rgba(119, 51, 68, 0.25) !important;
+    background: transparent !important;
+}
+
+/* Tombol Ask a Question */
+body.light-mode .message-buttons button:hover {
+    color: #fff8f4 !important;
+    background: #d44d5c !important;
+    border-color: #d44d5c !important;
+}
+
+/* Email */
+body.light-mode .email-link {
+    color: #d44d5c !important;
+}
+
+/* Social */
+body.light-mode .socials a {
+    color: #240b20 !important;
+    border-color: rgba(119, 51, 68, 0.25) !important;
+}
+/* Jika mode terang menggunakan class "light" */
+body.light .contact {
+    color: #240b20 !important;
+}
+
+body.light .contact-content h2 {
+    color: #240b20 !important;
+}
+
+body.light .contact-content h2 em {
+    color: #d44d5c !important;
+}
+
+body.light .contact .section-tag {
+    color: #d44d5c !important;
+}
+
+body.light .message-buttons button {
+    color: #240b20 !important;
+}
+/* =========================================
+   FIX HAVE AN IDEA - LIGHT MODE
+========================================= */
+
+/* Judul Have an idea? */
+body.light-mode .message-box h3 {
+    color: #240b20 !important;
+}
+
+/* Tulisan Let's talk. */
+body.light-mode .message-box h3 em {
+    color: #d44d5c !important;
+}
+
+/* SEND A MESSAGE */
+body.light-mode .message-box .mini {
+    color: #d44d5c !important;
+}
+
+/* Tombol di sebelah kanan */
+body.light-mode .message-buttons button {
+    color: #240b20 !important;
+    border-color: rgba(119, 51, 68, 0.25) !important;
+    background: transparent !important;
+}
+
+/* Saat tombol disentuh */
+body.light-mode .message-buttons button:hover {
+    color: #fff8f4 !important;
+    background: #d44d5c !important;
+    border-color: #d44d5c !important;
+}
+/* =================================
+   LIGHT MODE - ABOUT & SKILLS
+   BACKGROUND GAMBAR + GRADASI
+================================= */
+
+/* ABOUT ME */
+body.light-mode .about {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 248, 245, 0.55),
+            rgba(253, 228, 222, 0.45),
+            rgba(248, 216, 208, 0.35)
+        ),
+        url("background-about.jpe");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* SKILLS */
+body.light-mode .skills {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(248, 216, 208, 0.45),
+            rgba(252, 235, 231, 0.40),
+            rgba(255, 248, 245, 0.35)
+        ),
+        url("background-skills.jpe");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* =================================
+   PORTFOLIO / 2026 - LIGHT MODE
+================================= */
+
+body.light-mode .eyebrow {
+    color: var(--pink) !important;
 }

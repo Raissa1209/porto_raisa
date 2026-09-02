@@ -67,3 +67,21 @@ document.querySelectorAll(".project.small").forEach(card => {
   });
   card.addEventListener("mouseleave", () => card.style.transform = "");
 });
+/* =================================
+   DARK / LIGHT MODE
+================================= */
+
+const themeToggle = document.querySelector("#themeToggle");
+const themeIcon = document.querySelector(".theme-icon");
+
+themeToggle?.addEventListener("click", () => {
+
+  document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains("light-mode")) {
+    themeIcon.textContent = "☾";
+  } else {
+    themeIcon.textContent = "☼";
+  }
+
+});
