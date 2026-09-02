@@ -321,15 +321,50 @@
     </section>
   </main>
 
-  <div class="message-modal" aria-hidden="true">
-    <div class="modal-card">
-      <button class="close-modal">×</button>
-      <p class="mini">READY TO SEND</p>
-      <h3>Your message</h3>
-      <textarea id="messageText"></textarea>
-      <button class="btn primary copy-message">Copy message</button>
+<div class="message-modal" aria-hidden="true">
+  <div class="modal-card">
+
+    <button class="close-modal" type="button">×</button>
+
+    <p class="mini">READY TO SEND</p>
+    <h3>Let's talk.</h3>
+
+    <div class="form-group">
+      <label for="senderName">Your Name</label>
+      <input
+        type="text"
+        id="senderName"
+        placeholder="Enter your name"
+        required
+      >
     </div>
+
+    <div class="form-group">
+      <label for="senderEmail">Your Email</label>
+      <input
+        type="email"
+        id="senderEmail"
+        placeholder="Enter your email"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="messageText">Your Message</label>
+      <textarea
+        id="messageText"
+        placeholder="Write your message..."
+        required
+      ></textarea>
+    </div>
+
+    <button class="btn primary send-message" type="button">
+      Send Message ↗
+    </button>
+
   </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>

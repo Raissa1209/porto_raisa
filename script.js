@@ -33,29 +33,107 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+/* =================================
+   SEND MESSAGE
+================================= */
+
 const modal = document.querySelector(".message-modal");
 const messageText = document.querySelector("#messageText");
+const senderName = document.querySelector("#senderName");
+const senderEmail = document.querySelector("#senderEmail");
+const sendMessageBtn = document.querySelector(".send-message");
+
+
+// Tombol pilihan layanan
 document.querySelectorAll(".message-buttons button").forEach(button => {
+
   button.addEventListener("click", () => {
+
     messageText.value = button.dataset.message;
+
+    senderName.value = "";
+    senderEmail.value = "";
+
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
+
+    senderName.focus();
   });
+
 });
+
+
+// Tombol X
 document.querySelector(".close-modal").addEventListener("click", () => {
+
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
+
 });
+
+
+// Klik area luar modal
 modal.addEventListener("click", e => {
-  if (e.target === modal) modal.classList.remove("open");
+
+  if (e.target === modal) {
+
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+
+  }
+
 });
 
-document.querySelector(".copy-message").addEventListener("click", () => {
-  const subject = "Portfolio Inquiry";
-  const body = encodeURIComponent(messageText.value);
 
-  window.location.href =
-    `mailto:raisarahmaniailmi@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+// SEND MESSAGE
+sendMessageBtn.addEventListener("click", () => {
+
+  const name = senderName.value.trim();
+  const email = senderEmail.value.trim();
+  const message = messageText.value.trim();
+
+  // Cek input
+  if (!name || !email || !message) {
+
+    alert("Please fill in your name, email, and message.");
+
+    return;
+  }
+
+
+  // Subject email
+  const subject = encodeURIComponent(
+    `Portfolio Message from ${name}`
+  );
+
+
+  // Isi email
+  const body = encodeURIComponent(
+`Hello Raissa,
+
+My name is ${name}.
+
+My email: ${email}
+
+Message:
+${message}
+
+Thank you!`
+  );
+
+
+  // Buka Gmail Compose
+  const gmailURL =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=raisarahmaniailmi@gmail.com&su=${subject}&body=${body}`;
+
+
+  window.open(gmailURL, "_blank");
+
+
+  // Tutup modal
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+
 });
 
 document.querySelectorAll(".project.small").forEach(card => {
