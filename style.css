@@ -3281,3 +3281,13 @@ body.light-mode .music-button:hover {
         bottom: 18px;
     }
 }
+@media (max-width: 900px) {
+  .nav-actions {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .menu-btn {
+    margin-left: 8px;
+  }
+}

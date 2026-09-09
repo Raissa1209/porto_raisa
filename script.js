@@ -175,7 +175,7 @@ const musicButton = document.getElementById("musicButton");
 
 if (bgMusic && musicButton) {
 
-    bgMusic.volume = 0.2;
+    bgMusic.volume = 0.5;
 
     musicButton.addEventListener("click", () => {
 
@@ -185,7 +185,7 @@ if (bgMusic && musicButton) {
                 .then(() => {
                     musicButton.textContent = "Ⅱ";
                 })
-                .catch((error) => {
+                .catch(error => {
                     console.error("MUSIK GAGAL DIPUTAR:", error);
                 });
 

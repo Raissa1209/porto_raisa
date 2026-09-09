@@ -386,7 +386,7 @@
 </div>
 
 
-<audio id="bgMusic" loop>
+<audio id="bgMusic" loop preload="none">
     <source src="musik/musik.mp3" type="audio/mpeg">
 </audio>
 
@@ -394,18 +394,11 @@
   id="musicButton"
   class="music-button"
   type="button"
-  onclick="
-    const music = document.getElementById('bgMusic');
-    if (music.paused) {
-      music.play();
-      this.textContent = 'Ⅱ';
-    } else {
-      music.pause();
-      this.textContent = '♫';
-    }
-  "
 >
   ♫
 </button>
 
 <script src="script.js"></script>
+
+</body>
+</html>
