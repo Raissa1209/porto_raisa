@@ -1,6 +1,9 @@
 const loader = document.querySelector(".loader");
-window.addEventListener("load", () => {
-  setTimeout(() => loader.classList.add("hide"), 650);
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    loader?.classList.add("hide");
+  }, 650);
 });
 
 const menuBtn = document.querySelector(".menu-btn");
@@ -163,3 +166,36 @@ themeToggle?.addEventListener("click", () => {
   }
 
 });
+/* =================================
+   BACKGROUND MUSIC
+================================= */
+
+const bgMusic = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
+
+if (bgMusic && musicButton) {
+
+    bgMusic.volume = 0.2;
+
+    musicButton.addEventListener("click", () => {
+
+        if (bgMusic.paused) {
+
+            bgMusic.play()
+                .then(() => {
+                    musicButton.textContent = "Ⅱ";
+                })
+                .catch((error) => {
+                    console.error("MUSIK GAGAL DIPUTAR:", error);
+                });
+
+        } else {
+
+            bgMusic.pause();
+            musicButton.textContent = "♫";
+
+        }
+
+    });
+
+}
